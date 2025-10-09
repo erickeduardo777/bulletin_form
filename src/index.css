@@ -1,3 +1,13 @@
+@import "tailwindcss";
+@font-face {
+    font-family: "maintoo";
+    src: url("assets/fonts/Roboto-Regular.ttf") format('truetype');
+}
+
 html, body, #root {
- 
+    @apply h-dvh w-full bg-[#36384D] font-principal     
+}
+
+@theme {
+    --font-principal: "maintoo", sans-serif;
 }
