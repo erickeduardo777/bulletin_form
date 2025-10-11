@@ -6,8 +6,8 @@ function App() {
 
   
   return (
-    <div className='w-full h-dvh bg-transparent flex justify-center items-center'>
-      <div className='bg-white w-dvh h-dvh flex flex-col-reverse justify-end items-center'>
+    <div className='w-full min-h-dvh bg-transparent flex justify-center items-center'>
+      <div className='bg-white w-dvh min-h-dvh flex flex-col-reverse justify-end items-center'>
         <CxContent />
         <CxImage />
       </div>
