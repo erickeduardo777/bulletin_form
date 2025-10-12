@@ -1,7 +1,7 @@
 import { useId } from "react";
 import ItemList from "./items";
 
-const CxContent = () => {
+const CxContent = ({ modalOpen }) => {
   const emailId = useId();
 
   return (
@@ -24,7 +24,7 @@ const CxContent = () => {
             id={emailId}
           />
         </div>
-        <button className="bg-[#232742] text-white rounded-[10px] text-[18px] font-semibold p-4">Subscribe to monthly newsletter</button>
+        <button onClick={modalOpen} className="bg-[#232742] text-white rounded-[10px] text-[18px] font-semibold p-4 cursor-pointer outline-none">Subscribe to monthly newsletter</button>
       </form>
     </div>
   );
