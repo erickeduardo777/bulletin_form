@@ -5,7 +5,7 @@ const CxContent = ({ modalOpen }) => {
   const emailId = useId();
 
   return (
-    <div className="h-[80%] p-7 flex flex-col gap-[30px_0px]">
+    <div className="h-[80%] p-7 flex flex-col gap-[30px_0px] lg:h-[100%] lg:w-[50%]">
       <h1 className="text-4xl font-semibold text-[#242742]">Stay updated!</h1>
       <p className="text-[#36384E] text-[18px] font-medium">join 60,000+ product managers receiving monthly updates on:</p>
       <ul className="space-y-3.5">

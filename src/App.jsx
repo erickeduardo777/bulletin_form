@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="w-full min-h-dvh bg-transparent flex justify-center items-center">
       {modal === false ? (
-        <div className="bg-white w-dvh min-h-dvh flex flex-col-reverse justify-end items-center">
+        <div className="bg-white w-dvh min-h-dvh flex flex-col-reverse justify-end items-center lg:flex-row lg:min-h-[600px] max-h-[601px] lg:rounded-3xl lg:w-[75vw]">
           <CxContent modalOpen={openModal} />
           <CxImage />
         </div>
@@ -33,8 +33,8 @@ function App() {
           contentLabel="modal for response" // texto descritivo
           onRequestClose={closeModal} // fecha modal ao clicar fora ou apertar 'esc'
         >
-          <div className="w-full min-h-full flex flex-col-reverse p-9">
-            <div className="w-full h-[85%] flex flex-col justify-between landscape:gap-y-12 ">
+          <div className="w-full portrait:h-full landscape:min-h-full flex flex-col-reverse p-9">
+            <div className="w-full h-[85%] flex flex-col justify-between landscape:gap-y-12">
               <div className="space-y-12 ">
                 <Check
                   className="bg-linear-to-t from-red-400 to-red-500 from-50% text-white rounded-full p-4  size-[70px] landscape:size-[60px]"
