@@ -4,6 +4,7 @@ import CxContent from "./components/content";
 import CxImage from "./components/image";
 import Modal from "react-modal";
 import { Check } from "lucide-react";
+import ConfirmButton from "./components/buttonConfirm";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -17,23 +18,23 @@ function App() {
   };
 
   return (
-    <div className="w-full min-h-dvh bg-transparent flex justify-center items-center">
+    <div className="w-full min-h-dvh bg-transparent flex justify-center items-center lg:p-10">
       {modal === false ? (
-        <div className="bg-white w-dvh min-h-dvh flex flex-col-reverse justify-end items-center lg:flex-row lg:min-h-[600px] max-h-[601px] lg:rounded-3xl lg:w-[75vw]">
+        <div className="bg-white w-dvh min-h-screen flex flex-col-reverse justify-end items-center lg:flex-row  lg:min-h-[300px]  lg:rounded-3xl lg:w-[75vw] landscape:min-h-screen">
           <CxContent modalOpen={openModal} />
           <CxImage />
         </div>
       ) : (
         <Modal
           isOpen={modal}
-          className={"bg-white outline-none w-full h-full landscape:min-h-screen"} // caixa do modal
-          overlayClassName={
+          className={"bg-white outline-none lg:rounded-4xl w-full h-full landscape:min-h-screen lg:w-[500px] lg:landscape:min-h-[300px] lg:max-h-[500px]"} // caixa do modal
+          overlayClassName={// fundo do modal
             "bg-black/10 fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center"
           }
           contentLabel="modal for response" // texto descritivo
           onRequestClose={closeModal} // fecha modal ao clicar fora ou apertar 'esc'
         >
-          <div className="w-full portrait:h-full landscape:min-h-full flex flex-col-reverse p-9">
+          <div className="w-full portrait:h-full landscape:min-h-full flex flex-col-reverse p-9 lg:min-h-[200px]">
             <div className="w-full h-[85%] flex flex-col justify-between landscape:gap-y-12">
               <div className="space-y-12 ">
                 <Check
@@ -54,12 +55,9 @@ function App() {
                   </p>
                 </div>
               </div>
-              <button
-                onClick={closeModal}
-                className="bg-[#232742] text-white rounded-[10px] landscape:mb-3 text-[18px] font-bold  p-4"
-              >
+              <ConfirmButton onClick={closeModal}>
                 Dismiss message
-              </button>
+              </ConfirmButton>
             </div>
           </div>
         </Modal>

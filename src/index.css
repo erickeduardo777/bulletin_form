@@ -9,5 +9,5 @@ html, body, #root {
 }
 
 @theme {
-    --font-principal: "maintoo", sans-serif;
+    --font-principal: "maintoo", serif;
 }
