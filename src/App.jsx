@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="w-full min-h-dvh bg-transparent flex justify-center items-center lg:p-10">
       {modal === false ? (
-        <div className="bg-white w-dvh min-h-screen flex flex-col-reverse justify-end items-center lg:flex-row  lg:min-h-[300px]  lg:rounded-3xl lg:w-[75vw] landscape:min-h-screen">
+        <div className="bg-white w-dvh min-h-screen flex flex-col-reverse justify-end items-center lg:flex-row  lg:min-h-[300px] lg:max-h-[600px] lg:rounded-3xl lg:w-[75vw] landscape:min-h-screen">
           <CxContent modalOpen={openModal} />
           <CxImage />
         </div>
